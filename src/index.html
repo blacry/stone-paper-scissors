@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>stone-Paper-scissors</title>
+        <link rel="shortcut icon" href="https://www.online-stopwatch.com/images/rock-paper-scissors.png" type="image/x-icon">
+        <meta name="keywords" content="Rock Paper Scissors,Online Rock Paper Scissors,Random Rock Paper Scissors,Random Results,Random Picker,Random,Rock,Paper,Scissors" />
+        <meta name="description" content="Rock Paper Scissors Online! Try our random chance game - Rock Paper Scissors, and see if you can beat the computer!" />
+        <meta name="author" content="Rock Paper Scissors" />
+        <meta property="og:url" content="https://stone-paper-scissors-silk-eight.vercel.app/" />
+        <meta property="og:title" content="Rock Paper Scissors!" />
+        <meta property="og:image" content="https://www.online-stopwatch.com/images/rock-paper-scissors.png" />
+        <meta property="og:description" content="Rock Paper Scissors Online! Try our random chance game - Rock Paper Scissors, and see if you can beat the computer!" />
+        <meta property="og:type" content="website" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        
+        <div class="container-fluid wrapper">
+                
+            <h1>Stone Paper Scissors</h1>
+            <div class="row offset-md-4">
+                <button  class="col-sm-4 col-md-2 gap-1"  onclick="result( 'stone' ,computerChoise()) "><span>🗿</span>stone</button>
+                <button  class="col-sm-4 col-md-2 gap-1"  onclick="result( 'paper' ,computerChoise()) "><span>📝</span>paper</button>
+                <button  class="col-sm-4 col-md-2 gap-1"  onclick="result( 'scissors',computerChoise())"><span>✂️</span>scissors</button>
+            </div>
+            <div class="row offset-md-5">
+                <button class="col-sm-4 col-md-2 p-md-4" onclick="scoreDisplay()">Result</button>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
