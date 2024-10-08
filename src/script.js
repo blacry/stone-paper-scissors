@@ -13,48 +13,60 @@ function computerChoise() {
 }
 
 let score = [0,0,0] // first(0) win, sec(1) lose, third(2) tie
-
+const scoreObj = {win:0,lose:0,tie:0}
 
 function result(userChoise , computerChoise ) {
 
     if (userChoise == 'stone' && computerChoise == "stone") {
-        score[2]++;
+        scoreObj.tie++;
         return alert(`tied`),tie;
     } 
     else if(userChoise == 'stone' && computerChoise == 'paper') {
-        score[1]++;
+        scoreObj.lose++;
         return alert(`You Lose`),lose;
     } 
     else if(userChoise == 'stone' && computerChoise == 'scissors') {
-        score[0]++;
+        scoreObj.win++;
         return alert(`You Win`),win;
     } 
     else if(userChoise == 'paper' && computerChoise == 'stone') {
-        score[0]++;
+        scoreObj.win++;
         return alert(`You Win`),win;
     } 
     else if(userChoise == 'paper' && computerChoise == 'paper') {
-        score[2]++;
+        scoreObj.tie++;
         return alert(`Tied`),tie;
     }
     else if(userChoise == 'paper' && computerChoise == 'scissors') {
-        score[1]++;
+        scoreObj.lose++;
         return alert(`You Lose`),lose;
     } 
     else if(userChoise == 'scissors' && computerChoise == 'stone') {
-        score[2];
+        scoreObj.tie;
         return alert(`tied`),tie;
     }
     else if(userChoise == 'scissors' && computerChoise == 'paper') {
-        score[1]++;
+        scoreObj.lose++;
         return alert(`You Lose`),lose;
     }
     else if(userChoise == 'scissors' && computerChoise == 'scissors') {
-        score[0]++;
+        scoreObj.win++;
         return alert(`You Win`),win;
     } 
 } 
 
 function scoreDisplay(win,tie,lose) {
-    alert(`your number of win : ${score[0]}\nyour number of defeat : ${score[1]}\nyour number of tied matches : ${score[2]}`)
+    alert(`your number of win : ${scoreObj.win}
+        \nyour number of defeat : ${scoreObj.lose}
+        \nyour number of tied matches : ${scoreObj.tie}`)
+}
+
+function scoreReset() {
+    scoreObj.win = 0
+    scoreObj.lose = 0
+    scoreObj.tie = 0
+    alert(`reseted to :-
+        \nyour number of win : ${scoreObj.win}
+        \nyour number of defeat : ${scoreObj.lose}
+        \nyour number of tied matches : ${scoreObj.tie}`)
 }
