@@ -1,13 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; 
+}
+  
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
 
 .wrapper{
-    background-color: rgba(128, 128, 128, 0.727);
-    height: 100vh;
+    padding:10vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 0 !important;
 }
+
 h1{
     text-align: center;
-}    
+    padding-bottom: 1em;
+}
+
+img {
+    height: 5em;
+}
+
+btn-wrapper{
+    display: flex;
+}
 game-grp{
     display: flex;
     justify-content: center;
@@ -20,4 +59,58 @@ button{
 }
 button span{
     display: block;
+}
+
+p{
+    text-align: center;
+    font-weight: 600; 
+    margin: 1.5em 0;
+
+}
+
+
+
+
+
+
+/* mobile only shit */
+@media screen and (max-width: 530px){
+    button {
+        padding: 20px ;
+    }
+    img {
+        height: 15vw;
+    }
+}
+
+/* Small devices (tablets) */
+@media screen and (min-width: 576px) {
+    /* CSS rules */
+    html{
+        font-size : 15px;
+    }
+}
+
+/* Medium devices (tablets/laptops) */
+@media screen and (min-width: 768px) {
+    /* CSS rules */
+    html{
+        font-size : 16px;
+    }
+}
+
+/* Large devices (laptops/desktops) */
+@media screen and (min-width: 992px) {
+    /* CSS rules */
+    html{
+        font-size : 18px;
+    }
+}
+
+/* Extra large devices (large desktops) */
+@media screen and (min-width: 1200px) {
+    /* CSS rules */
+    html{
+        font-size : 20px;
+    }
 }

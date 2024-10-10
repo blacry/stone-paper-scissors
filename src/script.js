@@ -1,4 +1,5 @@
 
+// computer chooses its move via this fxn
 function computerChoise() {
     let computerChoise = ''
     const randomNum = 3*(Math.random())
@@ -12,61 +13,68 @@ function computerChoise() {
     };
 }
 
-let score = [0,0,0] // first(0) win, sec(1) lose, third(2) tie
+// it stores the result
 const scoreObj = {win:0,lose:0,tie:0}
 
+//  this finds the winner by comparing choesn value of both comp and user
 function result(userChoise , computerChoise ) {
-
     if (userChoise == 'stone' && computerChoise == "stone") {
         scoreObj.tie++;
-        return alert(`tied`),tie;
-    } 
+        return {winner:'You Tied', userChoise , computerChoise}
+    }
     else if(userChoise == 'stone' && computerChoise == 'paper') {
         scoreObj.lose++;
-        return alert(`You Lose`),lose;
+        return {winner:'You Lose', userChoise , computerChoise}
     } 
     else if(userChoise == 'stone' && computerChoise == 'scissors') {
         scoreObj.win++;
-        return alert(`You Win`),win;
+        return {winner:'You win', userChoise , computerChoise}
     } 
     else if(userChoise == 'paper' && computerChoise == 'stone') {
         scoreObj.win++;
-        return alert(`You Win`),win;
+        return {winner:'You win', userChoise , computerChoise}
     } 
     else if(userChoise == 'paper' && computerChoise == 'paper') {
         scoreObj.tie++;
-        return alert(`Tied`),tie;
+        return {winner:'You Tied', userChoise , computerChoise}
     }
     else if(userChoise == 'paper' && computerChoise == 'scissors') {
         scoreObj.lose++;
-        return alert(`You Lose`),lose;
+        return {winner:'You Lose', userChoise , computerChoise}
     } 
     else if(userChoise == 'scissors' && computerChoise == 'stone') {
-        scoreObj.tie;
-        return alert(`tied`),tie;
+        scoreObj.lose++;
+        return {winner:'You Lose', userChoise , computerChoise}
     }
     else if(userChoise == 'scissors' && computerChoise == 'paper') {
-        scoreObj.lose++;
-        return alert(`You Lose`),lose;
+        scoreObj.win++;
+        return {winner:'You win', userChoise , computerChoise}
     }
     else if(userChoise == 'scissors' && computerChoise == 'scissors') {
-        scoreObj.win++;
-        return alert(`You Win`),win;
+        scoreObj.tie++;
+        return {winner:'You Tied', userChoise , computerChoise}
     } 
 } 
 
-function scoreDisplay(win,tie,lose) {
-    alert(`your number of win : ${scoreObj.win}
-        \nyour number of defeat : ${scoreObj.lose}
-        \nyour number of tied matches : ${scoreObj.tie}`)
+var scoreDisplay = document.querySelector(".js-score")
+var winTab = document.querySelector(".js-insert")
+
+
+function scoreInsert( resultObj ) { 
+    winTab.innerHTML = 
+    `
+    <p class = 'center' >${resultObj.winner}</p>
+    You choose:<img src="https://supersimple.dev/projects/rock-paper-scissors/images/${resultObj.userChoise}-emoji.png" alt="${resultObj.userChoise}">
+    --and--
+    Computer choose:<img src="https://supersimple.dev/projects/rock-paper-scissors/images/${resultObj.computerChoise}-emoji.png" alt="${resultObj.userChoise}">
+    `
+    scoreDisplay.innerHTML = `Win: ${scoreObj.win} Losses: ${scoreObj.lose} Ties: ${scoreObj.tie}`
 }
 
 function scoreReset() {
     scoreObj.win = 0
     scoreObj.lose = 0
     scoreObj.tie = 0
-    alert(`reseted to :-
-        \nyour number of win : ${scoreObj.win}
-        \nyour number of defeat : ${scoreObj.lose}
-        \nyour number of tied matches : ${scoreObj.tie}`)
+    winTab.innerHTML = ``
+    scoreDisplay.innerHTML = `Win: ${scoreObj.win} Losses: ${scoreObj.lose} Ties: ${scoreObj.tie}`
 }
