@@ -22,36 +22,38 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
-        <div class="container-fluid wrapper">
+        <main role="main">
+            
+            <div class="container-fluid wrapper">
                 
-            <h1>Stone Paper Scissors</h1>
-
-            <div class="btn-wrapper">
-                <button onclick="scoreInsert(result( 'stone' ,computerChoise()))">
-                    <img src="images/rock.png" alt="ROCK">
-                </button>
-                <button onclick="scoreInsert(result( 'paper' ,computerChoise()))">
-                    <img src="images/paper.png" alt="PAPER">
-                </button>
-                <button onclick="scoreInsert(result( 'scissors' ,computerChoise()))">
-                    <img src="images/scissors.png" alt="SCISSORS">
-                </button>
-            </div>
-
-            <div class="result">
-                <div class="js-insert">
-                    <!-- result -->
-                    <!-- computer-you -->
+                <h1>Stone Paper Scissors</h1>
+                
+                <div class="btn-wrapper">
+                    <button onclick="scoreInsert(result( 'stone' ,computerChoise()))">
+                        <img src="images/rock.png" alt="ROCK">
+                    </button>
+                    <button onclick="scoreInsert(result( 'paper' ,computerChoise()))">
+                        <img src="images/paper.png" alt="PAPER">
+                    </button>
+                    <button onclick="scoreInsert(result( 'scissors' ,computerChoise()))">
+                        <img src="images/scissors.png" alt="SCISSORS">
+                    </button>
                 </div>
-                <p class="js-score" >Win:0 Losses:0 Ties:0</p>
+                
+                <div class="result">
+                    <div class="js-insert">
+                        <!-- result -->
+                        <!-- computer-you -->
+                    </div>
+                    <p class="js-score" >Win:0 Losses:0 Ties:0</p>
+                </div>
+                <div class="reset">
+                    <button onclick="scoreReset()">Reset Score</button>
+                </div>
+                
             </div>
-            <div class="reset">
-                <button onclick="scoreReset()">Reset Score</button>
-            </div>
-
-        </div>
-        <script src="script.js"></script>         
+        </main>
+            <script src="script.js"></script>         
         </script>
     </body>
-</html>
+    </html>
