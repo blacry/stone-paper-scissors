@@ -64,10 +64,11 @@ function scoreInsert( resultObj ) {
     winTab.innerHTML = 
     `
     <p class = 'center' >${resultObj.winner}</p>
-    You choose:<img src="https://supersimple.dev/projects/rock-paper-scissors/images/${resultObj.userChoise}-emoji.png" alt="${resultObj.userChoise}">
+    You choose:<img src="images/${resultObj.userChoise}.png" alt="${resultObj.userChoise}">
     --and--
-    Computer choose:<img src="https://supersimple.dev/projects/rock-paper-scissors/images/${resultObj.computerChoise}-emoji.png" alt="${resultObj.userChoise}">
+    Computer choose:<img src="images/${resultObj.computerChoise}.png" alt="${resultObj.computerChoise}">
     `
+
     scoreDisplay.innerHTML = `Win: ${scoreObj.win} Losses: ${scoreObj.lose} Ties: ${scoreObj.tie}`
 }
 
